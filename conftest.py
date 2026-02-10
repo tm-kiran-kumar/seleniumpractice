@@ -8,8 +8,8 @@ def driver(browser='chrome'):
         options = webdriver.ChromeOptions()
         options.add_argument('--headless=new')
         page = webdriver.Chrome(options=options)
-        #page.get('https://testautomationpractice.blogspot.com/')
-        page.get('https://practicetestautomation.com/practice-test-login/')
+        page.get('https://testautomationpractice.blogspot.com/')
+        #page.get('https://practicetestautomation.com/practice-test-login/')
         page.maximize_window()
     elif browser == 'safari':
         page = webdriver.Safari()

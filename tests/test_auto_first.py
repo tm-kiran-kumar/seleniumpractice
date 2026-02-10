@@ -1,5 +1,7 @@
 from pages.auto_first import AutoFirst
+import pytest
 
+@pytest.mark.smoke
 def test_autopage(driver):
 
     name = 'Kiran Kumar'

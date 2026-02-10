@@ -1,5 +1,8 @@
 from pages.auto_second import AutoSecond
+import pytest
 
+
+@pytest.mark.smoke
 def test_autopage1(driver):
     auto1 = AutoSecond(driver)
 
