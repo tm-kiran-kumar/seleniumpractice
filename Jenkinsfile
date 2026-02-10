@@ -7,7 +7,9 @@ pipeline {
                 # Use a virtual environment to keep your Mac clean
                 python3 -m venv venv --clear
                 source venv/bin/activate
+                python3 -m pip install --upgrade pip
                 pip install -r requirements.txt
+
                 '''
             }
         }
@@ -17,7 +19,7 @@ pipeline {
                 source venv/bin/activate
                 # Run only tests marked with @pytest.mark.smoke
                 # --junitxml saves results so Jenkins can read them
-                pytest -m smoke --junitxml=results.xml
+                pytest -m smoke --html=report.html --self-contained-html
                 '''
             }
         }
