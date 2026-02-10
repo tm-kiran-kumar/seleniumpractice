@@ -27,7 +27,11 @@ pipeline {
     post {
         always {
             // 2. Publish test results visually in Jenkins
-            junit 'results.xml'
+            junit testResults: 'results.xml', allowEmptyResults: true
+
+            //Archive the HTML report so it's clickable in the UI
+
+            archiveArtifacts artifacts: 'report.html', fingerprint: true
 
             // Clean up workspace after run
             deleteDir()
