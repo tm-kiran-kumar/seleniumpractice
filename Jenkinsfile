@@ -19,7 +19,7 @@ pipeline {
                 source venv/bin/activate
                 # Run only tests marked with @pytest.mark.smoke
                 # --junitxml saves results so Jenkins can read them
-                pytest -m smoke --html=report.html --self-contained-html
+                pytest -m smoke --junitxml=results.xml --html=report.html --self-contained-html
                 '''
             }
         }
