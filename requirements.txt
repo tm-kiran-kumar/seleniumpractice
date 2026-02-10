@@ -1,6 +1,6 @@
 
 
-PySocks==1.7.1
+openpyxl==3.1.5
 pytest==8.0.0
 pytest-html==4.2.0
 pytest-metadata==3.1.1
